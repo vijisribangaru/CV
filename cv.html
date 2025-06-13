@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px 0;
+        }
+        header {
+            background: #333;
+            color: #fff;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        header nav a{
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: #0077cc;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .btn {
+            padding: 10px 20px;
+            background: #fff;
+            color: #0077cc;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .about,
+        .certificate,
+        .personal-detils,
+        .contact {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+        .projects .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 20px;
+        }
+
+        .project-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-left: 5px solid #0077cc;
+        }
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background: #0077cc;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class=""container">
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
+    <nav id="navMenu">
+        <ul>
+            <li><a href="about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#content">Contact</a></li>
+            <li><a href="resume.pdf" download class="btn-resume">Resume</a></li>
+        
+        </ul>
+    </nav>
+</div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h2>Hi, I'm</h2>
+            <p>Web Developer | Designer | Creator</p>
+            <br>
+            <a href="#projects" class="btn">View Projects</a>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Born to Win</p>
+        </div>
+    </section>
+    <section id="education" class="en">
+        <div class="container">
+            <h2>education & Qualification</h2>
+            <ul>
+                <li><strong>B.Sc., computer Science</strong> - University of Madras(1997-2000)</li>
+                <li><strong>High School</strong> - GGHSS (1995 - 1997)</li>
+            </ul>
+        </div>
+    </section>
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2>certificates</h2>
+            <ul>
+                <li>GNIIT - NIIt</li>
+                <li>OCI - Oracle</li>
+            </ul>
+        </div>
+    </section>
+    <section id="hobbies" class="hobbies">
+        <div class="container">
+            <h2>Hobbies</h2>
+            <p>Surfing new informations</p>
+        </div>
+    </section>
+    <section id="details" class="personal details">
+        <div class="container">
+            <h2>Personal Details</h2>
+            <ul>
+                <li><strong>Name:</strong> Dr.V.Vijayalakshmi</li>
+                <li><strong>DoB:</strong> dd/mm/yyyy</li>
+                <li><strong>Phone:</strong> 9876543210</li>
+                <li><strong>Email:</strong> abc@gmail.com</li>
+                <li><strong>Location:</strong> Earth</li>
+            </ul>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Project One</h3>
+                    <p>A short description of your project.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project Two</h3>
+                    <p>A short description of your project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                 <input type="email" placeholder="Your Email" required>
+                 <textarea placeholder="Your Message" required></textarea>
+                 <button type="submit">Send</button>
+            </form>
+            <p id="formStatus"></p>
+        </div>
+    </section>
+    <footer>
+        <div class="container"></div>
+        <p>&copy; 2025 Viji, all rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
