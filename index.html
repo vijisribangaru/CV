@@ -11,6 +11,7 @@
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        
         html {
             scroll-behavior: smooth;
         }
@@ -96,11 +97,64 @@
             padding: 20px 0;
             margin-top: 40px;
         }
+        section ul{
+            list-style: none;
+            padding-left: 0;
+        }
+        section ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .btn-resume {
+            padding: 6px 12px;
+            background: #0077cc;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        .btn-resume:hover {
+            background-color: #005fa3;
+        }
+        .personal-detils LI STRONG {
+            display: inline-block;
+            width: 120px;
+        }
+        .hamburger{
+            display: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+        }
+        @media(max-width: 768px) {
+            header nav ul{
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 70px;
+                right: 0;
+                width: 200px;
+                display: none;
+            }
+        }
+        header nav ul.show{
+            display: flex;
+            padding-left: 20px;
+            padding-bottom: 15px;
+        }
+        .hamburger{
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 25px;
+        }
+        header .logo{
+            margin-left: 20px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class=""container">
+        <div class="container">
         <div class="hamburger" id="hamburger">
             &#9776;
         </div>
@@ -133,7 +187,7 @@
             <p>Born to Win</p>
         </div>
     </section>
-    <section id="education" class="en">
+    <section id="education" class="education">
         <div class="container">
             <h2>education & Qualification</h2>
             <ul>
@@ -200,6 +254,25 @@
         <div class="container"></div>
         <p>&copy; 2025 Viji, all rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js">
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("navMenu").querySelector("ul");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const status = document.getElementById("formStatus");
+  status.textContent = "Sending...";
+
+  setTimeout(() => {
+    status.textContent = "Thanks! I will get back to you soon.";
+    this.reset();
+  }, 1000);
+});
+    </script>
 </body>
 </html>
